@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seattle New Media</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="Script.js"></script>
+  </head>
+  <body>
+    <header class="seattlemedia-header">
+      <div class="seattlemedia-container">
+        <div class="seattlemedia-logo">
+          <img src="/assets/header-logo.png" alt="Logo" />
+        </div>
+
+        <button class="seattlemedia-menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="seattlemedia-nav" id="mobile-menu">
+          <a href="#">About us</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Blog</a>
+          <a href="#">Services</a>
+          <button class="seattlemedia-contact-btn mobile-btn">
+            Contact us
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="seattlemedia-hero">
+      <div class="seattlemedia-hero-content">
+        <h1>Webflow<br />Development Agency</h1>
+      </div>
+      <div class="seattlemedia-hero-graphics">
+        <!-- Optional: Add SVG or background image here -->
+        <img src="/assets/hero-section-img.webp" alt="Hero Image" />
+      </div>
+      <div class="seattlemedia-about-section">
+        <div class="seattlemedia-container">
+          <span class="seattlemedia-section-label">
+            <span class="dot"></span> About
+          </span>
+          <p class="seattlemedia-about-text">
+            Lorem ipsum dolor sit amet consectetur. Consectetur viverra in
+            commodo ullamcorper. Laoreet enim arcu lobortis quam. Pellentesque
+            varius eget.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="div-section"></div>
+
+    <!-- Third Section -->
+
+    <section class="seattlemedia-challenges-section">
+      <div class="seattlemedia-container">
+        <h2 class="seattlemedia-challenges-title">
+          <span class="highlight">Challenges</span> Faced<br />by Agencies
+        </h2>
+
+        <div class="seattlemedia-challenges-grid">
+          <div class="card-gradient-border">
+            <div class="seattlemedia-challenge-card">
+              <h3>Design and Development Bottlenecks</h3>
+              <ul>
+                <li>Ut amet facilisis convallis nisl.</li>
+                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-gradient-border">
+            <div class="seattlemedia-challenge-card">
+              <h3>Maintaining Brand Consistency</h3>
+              <ul>
+                <li>Ut amet facilisis convallis nisl.</li>
+                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-gradient-border">
+            <div class="seattlemedia-challenge-card">
+              <h3>Scaling Website <br />Projects</h3>
+              <ul>
+                <li>Ut amet facilisis convallis nisl.</li>
+                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Subsection -->
+      <div class="seattlemedia-cta-section">
+        <div class="seattlemedia-cta-content">
+          <h3>
+            We bring Webflow websites to life with<br />
+            powerful integrations
+          </h3>
+          <button class="seattlemedia-cta-button">Read More →</button>
+          <div class="seattlemedia-cta-images">
+            <img src="/assets/challange-cta-img.webp" alt="Example 1" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section class="services-section">
+      <div class="section-header">
+        <span class="seattlemedia-section-label">
+          <span class="dot"></span> Expertise
+        </span>
+
+        <h2>Our <span class="highlight">Webflow Services</span></h2>
+      </div>
+      <div class="services-carousel" id="carousel">
+        <div class="service-card">
+          <div class="circle">1</div>
+          <h3>
+            Custom Webflow<br />
+            Development
+          </h3>
+          <p>
+            We customize every website project to exceed your expectations.
+            Regardless of your niche, we use creative and bespoke designs that
+            are tailor-made for your audience.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="circle">2</div>
+          <h3>Expert Webflow <br />Development</h3>
+          <p>
+            We customize every website project to exceed your expectations.
+            Regardless of your niche, we use creative and bespoke designs that
+            are tailor-made for your audience.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="circle">3</div>
+          <h3>
+            Webflow Maintenance and<br />
+            Support
+          </h3>
+          <p>
+            We customize every website project to exceed your expectations.
+            Regardless of your niche, we use creative and bespoke designs that
+            are tailor-made for your audience.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="circle">4</div>
+          <h3>Webflow <br />Consultation</h3>
+          <p>
+            We customize every website project to exceed your expectations.
+            Regardless of your niche, we use creative and bespoke designs that
+            are tailor-made for your audience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Timeline Section -->
+    <section class="seattle-new-media-timeline-how-it-works">
+      <div class="seattle-new-media-timeline-container">
+        <div class="seattle-new-media-timeline-left">
+          <span class="seattlemedia-section-label">
+            <span class="dot"></span> How it Works
+          </span>
+          <h2 class="seattle-new-media-timeline-title">
+            How Webflow <br />
+            Can
+            <span class="seattle-new-media-timeline-highlight"
+              >Help Your Agency</span
+            >
+          </h2>
+        </div>
+
+        <div class="seattle-new-media-timeline-timeline">
+          <div class="seattle-new-media-timeline-line-track">
+            <div class="seattle-new-media-timeline-line-progress"></div>
+          </div>
+
+          <div class="seattle-new-media-timeline-step" data-step="1">
+            <div class="seattle-new-media-timeline-marker"></div>
+            <div class="seattle-new-media-timeline-step-column">
+              <div class="seattle-new-media-timeline-step-number">01</div>
+              <div class="seattle-new-media-timeline-step-content">
+                <h3>Accelerated Development Process</h3>
+                <p>
+                  Sit tellus ipsum nec consectetur. Eget vitae et tristique
+                  enim. Porttitor diam eget lectus vulputate proin mattis in at.
+                  Dapibus tortor turpis purus viverra lectus netus sodales. Id
+                  auctor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="seattle-new-media-timeline-step" data-step="2">
+            <div class="seattle-new-media-timeline-marker"></div>
+            <div class="seattle-new-media-timeline-step-column">
+              <div class="seattle-new-media-timeline-step-number">02</div>
+              <div class="seattle-new-media-timeline-step-content">
+                <h3>Enhanced Design Flexibility</h3>
+                <p>
+                  Sit tellus ipsum nec consectetur. Eget vitae et tristique
+                  enim. Porttitor diam eget lectus vulputate proin mattis in at.
+                  Dapibus tortor turpis purus viverra lectus netus sodales. Id
+                  auctor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="seattle-new-media-timeline-step" data-step="3">
+            <div class="seattle-new-media-timeline-marker"></div>
+            <div class="seattle-new-media-timeline-step-column">
+              <div class="seattle-new-media-timeline-step-number">03</div>
+              <div class="seattle-new-media-timeline-step-content">
+                <h3>Improved Collaboration</h3>
+                <p>
+                  Sit tellus ipsum nec consectetur. Eget vitae et tristique
+                  enim. Porttitor diam eget lectus vulputate proin mattis in at.
+                  Dapibus tortor turpis purus viverra lectus netus sodales. Id
+                  auctor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="seattle-new-media-timeline-step" data-step="4">
+            <div class="seattle-new-media-timeline-marker"></div>
+            <div class="seattle-new-media-timeline-step-column">
+              <div class="seattle-new-media-timeline-step-number">04</div>
+              <div class="seattle-new-media-timeline-step-content">
+                <h3>Cost-Effective Solution</h3>
+                <p>
+                  Sit tellus ipsum nec consectetur. Eget vitae et tristique
+                  enim. Porttitor diam eget lectus vulputate proin mattis in at.
+                  Dapibus tortor turpis purus viverra lectus netus sodales. Id
+                  auctor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="seattle-new-testimonial-cta-testimonial">
+      <div class="seattle-new-testimonial-cta">
+        <div class="seattle-new-testimonial-cta-icon">
+          <img src="/assets/cta-icon.png" alt="Chat icon" />
+        </div>
+        <div class="seattle-new-testimonial-cta-banner">
+          <div class="seattle-new-testimonial-cta-content">
+            <h3>Looking for help defining what you need?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Felis lorem adipiscing
+              tincidunt parturient.
+            </p>
+          </div>
+          <div class="seattle-new-testimonial-cta-button">
+            <button>Contact us</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Carousel -->
+      <div class="seattle-new-testimonial-carousel">
+        <div class="seattle-new-testimonial-slide active">
+          <div class="seattle-new-testimonial-slide-column">
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+          </div>
+          <div class="seattle-new-testimonial-slide-column-content">
+            <p>
+              “The team did a great job with a quick turnaround on my webflow
+              site build. They quickly got on zoom to discuss the project and
+              understand the scope…”
+            </p>
+            <div class="testimonial-divider"></div>
+            <div class="seattle-new-testimonial-author">
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <div>
+                <strong>Sierra Johnson</strong><br />
+                <span>Sr UX Designer, AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seattle-new-testimonial-slide">
+          <div class="seattle-new-testimonial-slide-column">
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+          </div>
+          <div class="seattle-new-testimonial-slide-column-content">
+            <p>
+              “The team did a great job with a quick turnaround on my webflow
+              site build. They quickly got on zoom to discuss the project and
+              understand the scope…”
+            </p>
+            <div class="testimonial-divider"></div>
+            <div class="seattle-new-testimonial-author">
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <div>
+                <strong>Sierra Johnson</strong><br />
+                <span>Sr UX Designer, AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seattle-new-testimonial-slide">
+          <div class="seattle-new-testimonial-slide-column">
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+          </div>
+          <div class="seattle-new-testimonial-slide-column-content">
+            <p>
+              “The team did a great job with a quick turnaround on my webflow
+              site build. They quickly got on zoom to discuss the project and
+              understand the scope…”
+            </p>
+            <div class="testimonial-divider"></div>
+            <div class="seattle-new-testimonial-author">
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <div>
+                <strong>Sierra Johnson</strong><br />
+                <span>Sr UX Designer, AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Dots -->
+        <div class="seattle-new-testimonial-carousel-dots">
+          <span data-slide="0" class="active"></span>
+          <span data-slide="1"></span>
+          <span data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!--  Integeration Section -->
+
+    <section class="seattle-new-integration-section">
+      <div class="blurred-circle"></div>
+      <div class="seattle-new-integration-container">
+        <!-- Left Content -->
+        <div class="seattle-new-integration-content">
+          <h2>
+            Powerful <span class="highlight">Webflow</span><br />
+            <span class="highlight">Integrations</span>
+          </h2>
+          <p>
+            We offer powerful integrations for your Webflow website. Our Webflow
+            team are experts at integrating and automating websites with various
+            third party tools using different automation platforms and tools
+            like Zapier, Integromat, Automate.io, Alloy Automation & more.
+          </p>
+          <p>
+            Our webflow developers can easily connect your website with your
+            favorite third party tools like Salesforce, Mailchimp, Airtable,
+            Stripe and more. Regardless of whether you are looking to send all
+            website leads to a Slack channel or automate a MailChimp email
+            series, we can help.
+          </p>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="seattle-new-integration-graphic">
+          <img src="/assets/integration-img.png" alt="Integration Icons" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section-->
+
+    <section class="seattlemedia-projects">
+      <div class="seattlemedia-container">
+        <h2 class="seattlemedia-projects-heading">
+          Our Recent <span>Webflow Projects</span>
+        </h2>
+
+        <div class="seattlemedia-projects-grid">
+          <!-- Project Card 1 -->
+          <div class="seattlemedia-project-card">
+            <img
+              src="/assets/project-image-01.png"
+              alt="Project 1"
+              class="seattlemedia-project-image"
+            />
+            <p class="seattlemedia-project-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="seattlemedia-project-card">
+            <img
+              src="/assets/project-image-02.png"
+              alt="Project 2"
+              class="seattlemedia-project-image"
+            />
+            <p class="seattlemedia-project-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="seattlemedia-projects-btn-wrap">
+          <a href="#" class="seattlemedia-projects-btn">Explore more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Review -->
+    <section class="seattle-google-review-section">
+      <div class="blurred-circle2"></div>
+      <div class="seattle-google-review-container">
+        <p class="seattle-google-review-quote">
+          Their professionalism and how inquisitive they were to follow on with
+          my issues is impressive.
+        </p>
+        <p class="seattle-google-review-author">
+          Founder, Amped Up Live – Review on <a href="#">Clutch</a>
+        </p>
+
+        <div class="seattle-google-review-rating-box">
+          <img src="/assets/rating-img.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Slider -->
+    <section class="seattle-client-slider">
+      <div class="seattle-client-slider-track" id="seattleClientSliderTrack">
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-01.png" alt="Client 1" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-02.png" alt="Client 2" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-03.png" alt="Client 3" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-04.png" alt="Client 4" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-05.png" alt="Client 5" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-06.png" alt="Client 6" />
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-01.png" alt="Client 1" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-02.png" alt="Client 2" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-03.png" alt="Client 3" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-04.png" alt="Client 4" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-05.png" alt="Client 5" />
+        </div>
+        <div class="seattle-client-logo">
+          <img src="/assets/Slider-logo-06.png" alt="Client 6" />
+        </div>
+      </div>
+    </section>
+
+    <!--Webflow section -->
+
+    <section class="seattle-webflow-section">
+      <div class="seattle-webflow-container">
+        <div class="seattle-webflow-left">
+          <h2 class="seattle-webflow-title">
+            <span class="seattle-webflow-blue">Expert Webflow</span><br />
+            <span class="seattle-webflow-blue">Designers & Developers</span
+            ><br />
+            <span class="seattle-webflow-white">at Your Disposal</span>
+          </h2>
+        </div>
+        <div class="seattle-webflow-right">
+          <p class="seattle-webflow-text">
+            Seattle New Media is not your typical web design and development
+            agency. We are one of the leading and trusted Webflow agencies in
+            the world, specializing in building high converting Webflow
+            websites. We can assist you in creating anything and everything,
+            from a simple webflow website to a complex site with multiple
+            animations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--FAQ Section -->
+
+    <section class="seattle-faq-section">
+      <div class="seattle-new-testimonial-cta">
+        <div class="seattle-new-testimonial-cta-icon">
+          <img src="/assets/cta-icon.png" alt="Chat icon" />
+        </div>
+        <div class="seattle-new-testimonial-cta-banner">
+          <div class="seattle-new-testimonial-cta-content">
+            <h3>Book a Free Consultation Today!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Felis lorem adipiscing
+              tincidunt parturient.
+            </p>
+          </div>
+          <div class="seattle-new-testimonial-cta-button">
+            <button>Contact us</button>
+          </div>
+        </div>
+      </div>
+      <div class="seattle-faq-glow"></div>
+
+      <div class="seattle-faq-container">
+        <div class="seattle-faq-heading">
+          <span class="seattlemedia-section-label">
+            <span class="dot"></span> FAQ
+          </span>
+          <h2 class="seattle-faq-title">
+            Your
+            <span class="seattle-faq-highlight">Questions,<br />Answered</span>
+          </h2>
+        </div>
+
+        <div class="seattle-faq-accordion">
+          <div class="seattle-faq-item">
+            <div class="seattle-faq-question">
+              Scelerisque eget <span class="seattle-faq-toggle">+</span>
+            </div>
+            <div class="seattle-faq-answer">Answer for question 1.</div>
+          </div>
+          <div class="seattle-faq-item">
+            <div class="seattle-faq-question">
+              Neque cras eget amet vitae aliquet purus donec. Et lorem?
+              <span class="seattle-faq-toggle">+</span>
+            </div>
+            <div class="seattle-faq-answer">Answer for question 2.</div>
+          </div>
+          <div class="seattle-faq-item">
+            <div class="seattle-faq-question">
+              Mauris eget cursus facilisi nibh mi consequat ultricies?
+              <span class="seattle-faq-toggle">+</span>
+            </div>
+            <div class="seattle-faq-answer">Answer for question 3.</div>
+          </div>
+          <div class="seattle-faq-item">
+            <div class="seattle-faq-question">
+              Commodo ac condimentum et non vulputate?
+              <span class="seattle-faq-toggle">+</span>
+            </div>
+            <div class="seattle-faq-answer">Answer for question 4.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Section -->
+    <div class="footer-bg">
+      <section class="seattle-footer-cta">
+        <div class="seattle-footer-cta-inner">
+          <h2>Let’s Build Something Amazing Together</h2>
+          <p>
+            Ready to take your online presence to the next level? Contact
+            WebSnap today to discuss your project.
+            <br />Let’s turn your vision into a reality with our innovative web
+            development solutions.
+          </p>
+          <a href="#" class="seattle-footer-btn">Let’s connect</a>
+        </div>
+      </section>
+
+      <footer class="seattle-footer">
+        <div class="div-section"></div>
+        <div class="seattle-footer-content">
+          <div class="seattle-footer-col">
+            <img
+              src="/assets/footer-logo.png"
+              alt="Logo"
+              class="seattle-footer-logo"
+            />
+            <p class="seattle-footer-tagline">We make the web a snap!</p>
+            <p class="seattle-footer-desc">
+              WebSnap is a website design agency with decades of combined
+              experience in custom web design, development and digital
+              marketing. We build websites that convert and help your business
+              grow.
+            </p>
+          </div>
+
+          <div class="seattle-footer-col foot-keep-in-touch">
+            <h4>Keep in touch</h4>
+            <a href="mailto:hello@websnap.agency">hello@websnap.agency</a>
+            <div class="seattle-footer-badge">🛡️ Enterprise Partner</div>
+          </div>
+
+          <div class="seattle-footer-col foot-head-color">
+            <p>Services</p>
+            <ul>
+              <li>Webflow agency</li>
+              <li>Webflow enterprise</li>
+              <li>UI/UX design</li>
+              <li>No-code agency</li>
+            </ul>
+          </div>
+          <div class="seattle-footer-col">
+            <h4>&nbsp</h4>
+            <ul>
+              <li>Airtable</li>
+              <li>Migrations</li>
+              <li>Integrations</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+
+          <div class="seattle-footer-col foot-head-color">
+            <p>Follow us</p>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>LinkedIn</li>
+            </ul>
+          </div>
+
+          <div class="seattle-footer-col foot-head-color">
+            <p>Location</p>
+            <p class="location-foot">
+              Seattle New Media<br />
+              5608 17th Ave NW<br />
+              Suite #581<br />
+              Seattle, WA 98107
+            </p>
+          </div>
+        </div>
+        <div class="seattle-footer-bottom">
+          <p>
+            © 2024 WebSnap – All rights reserved |
+            <a href="#">Privacy policy</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    const glow = document.querySelector(".seattle-faq-glow");
+    const section = document.querySelector(".seattle-faq-section");
+
+    section.addEventListener("mousemove", (e) => {
+      const rect = section.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      glow.style.left = `${x}px`;
+      glow.style.top = `${y}px`;
+      glow.style.opacity = 0.5;
+    });
+
+    section.addEventListener("mouseleave", () => {
+      glow.style.opacity = 0;
+    });
+
+    // Toggle accordion
+    document.querySelectorAll(".seattle-faq-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <script>
+    const slides = document.querySelectorAll(".seattle-new-testimonial-slide");
+    const dots = document.querySelectorAll(
+      ".seattle-new-testimonial-carousel-dots span"
+    );
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const slideIndex = parseInt(dot.dataset.slide);
+
+        slides.forEach((slide) => slide.classList.remove("active"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[slideIndex].classList.add("active");
+        dot.classList.add("active");
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const progressLine = document.querySelector(
+        ".seattle-new-media-timeline-line-progress"
+      );
+      const steps = document.querySelectorAll(
+        ".seattle-new-media-timeline-step"
+      );
+      const timeline = document.querySelector(
+        ".seattle-new-media-timeline-timeline"
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Reveal steps with animation
+              steps.forEach((step, index) => {
+                setTimeout(() => {
+                  step.classList.add("visible");
+
+                  // After the last step is visible, calculate height to last marker
+                  if (index === steps.length - 1) {
+                    const lastMarker = step.querySelector(
+                      ".seattle-new-media-timeline-marker"
+                    );
+                    const markerRect = lastMarker.getBoundingClientRect();
+                    const timelineRect = timeline.getBoundingClientRect();
+                    console.log(markerRect);
+                    // Calculate the distance from top of timeline to center of marker
+                    const markerOffset =
+                      markerRect.top -
+                      timelineRect.top +
+                      markerRect.height / 2 -
+                      35;
+
+                    // Apply height to progress line
+                    progressLine.style.height = `${markerOffset}px`;
+                  }
+                }, index * 300);
+              });
+
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(timeline);
+    });
+  </script>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener("mousedown", (e) => {
+      isDown = true;
+      carousel.classList.add("dragging");
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      isDown = false;
+      carousel.classList.remove("dragging");
+    });
+
+    carousel.addEventListener("mouseup", () => {
+      isDown = false;
+      carousel.classList.remove("dragging");
+    });
+
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast multiplier
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+    });
+  </script>
+</html>

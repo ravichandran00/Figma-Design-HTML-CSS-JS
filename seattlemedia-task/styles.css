@@ -1,0 +1,1660 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+
+  background: #130b32;
+}
+
+/* Header layout */
+.seattlemedia-header {
+  position: sticky;
+  top: 0;
+  background-color: #130b32;
+  z-index: 1000;
+  width: 100%;
+  padding: 1rem 0 0;
+}
+.seattlemedia-logo {
+  display: contents;
+}
+.seattlemedia-header .seattlemedia-container {
+  max-width: 1445px;
+  margin: 0 auto;
+  padding: 0 0px 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff33;
+}
+
+/* Logo */
+.seattlemedia-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Nav styles for desktop */
+.seattlemedia-nav {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Nav links */
+.seattlemedia-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Manrope";
+  transition: color 0.3s ease;
+}
+
+.seattlemedia-nav a:hover {
+  color: #7344cd;
+}
+
+/* Contact us button */
+.seattlemedia-contact-btn {
+  padding: 19px 41px;
+  background-color: #3e2dc9;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-family: "Manrope";
+  font-size: 16px;
+  border-radius: 38px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seattlemedia-contact-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Mobile menu toggle (hamburger) */
+.seattlemedia-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.seattlemedia-menu-toggle span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Hide desktop nav initially on mobile */
+  .seattlemedia-nav {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100vh;
+    background-color: #0f0c29;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  .seattlemedia-header {
+    padding: 10px 15px;
+  }
+  /* Slide-in active menu */
+  .seattlemedia-nav.active {
+    right: 0;
+  }
+
+  /* Show hamburger on mobile */
+  .seattlemedia-menu-toggle {
+    display: flex;
+  }
+
+  /* Full width contact button in mobile menu */
+ .seattlemedia-contact-btn.mobile-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+}
+}
+
+/* Desktop overrides */
+@media (min-width: 769px) {
+  .seattlemedia-nav {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    display: flex !important;
+  }
+
+  .seattlemedia-menu-toggle {
+    display: none;
+  }
+
+  .seattlemedia-contact-btn.mobile-btn {
+    display: inline-block;
+  }
+}
+
+/* Hero Section */
+.seattlemedia-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.seattlemedia-hero-content {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+
+.seattlemedia-hero-graphics img {
+  width: 100%;
+}
+.seattlemedia-hero-graphics {
+  width: 100%;
+}
+.seattlemedia-hero-content h1 {
+  font-size: 80px;
+  line-height: 88px;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  .seattlemedia-hero-content {
+    position: relative;
+    top: 4%;
+    left: 4%;
+  }
+  .seattle-footer-content {
+    grid-template-columns: unset !important;
+  }
+}
+/* Responsive */
+@media (min-width: 768px) {
+  .seattlemedia-hero {
+    flex-direction: row;
+    justify-content: space-between;
+            padding: 60px 0 0 0;
+    display: block;
+  }
+  .seattlemedia-header {
+    padding: 1rem 10px 0;
+  }
+
+  .seattlemedia-hero-content h1 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .seattlemedia-hero {
+    padding: 30px 0 0 0;
+  }
+  .seattlemedia-hero-content {
+    position: relative;
+    top: 4%;
+    left: 4%;
+  }
+  .seattlemedia-hero-content h1 {
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 400;
+  }
+}
+
+/* About Us */
+
+/* About Section */
+.seattlemedia-about-section {
+  background-image: url(/assets/about-us-bg-img.webp);
+  padding: 6rem 1.5rem;
+  background-position: center;
+  margin-top: -25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.seattlemedia-about-section .seattlemedia-container {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  z-index: 1;
+  text-align: left;
+  display: block;
+}
+
+/* Label Badge */
+.seattlemedia-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 16px;
+  font-family: "Manrope";
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.seattlemedia-section-label .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #1dbdff;
+  border-radius: 50%;
+}
+
+/* Paragraph text */
+.seattlemedia-about-text {
+  font-size: 40px;
+  line-height: 48px;
+  color: white;
+  font-weight: 400;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .seattlemedia-about-text {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seattlemedia-about-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Challenge section */
+
+.card-gradient-border {
+  padding: 1px; /* Controls border thickness */
+  border-radius: 16px;
+  background: linear-gradient(
+    to right,
+    #ffffff00,
+    rgb(255 255 255 / 28%)
+  ); /* Gradient border */
+}
+.seattlemedia-challenges-section {
+  /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+  padding: 5rem 1.5rem;
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    #130b32 15%,
+    #1dbdff61 50%,
+    #130b32 100%
+  );
+  padding: 5rem 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.seattlemedia-container {
+  max-width: 1445px;
+  margin: 0 auto;
+}
+
+.seattlemedia-challenges-title {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  line-height: 76px;
+  text-align: left;
+}
+
+.seattlemedia-challenges-title .highlight {
+  color: #00aaff;
+}
+
+/* Card Grid */
+.seattlemedia-challenges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.div-section {
+  width: 100%;
+  height: 1px;
+  background: #ffffff33;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.seattlemedia-challenge-card {
+  background: linear-gradient(45deg, #01061f, #72768f00);
+
+  border-radius: 16px;
+  padding: 2rem;
+  flex: 1 1 300px;
+  max-width: 465px;
+}
+
+.seattlemedia-challenge-card h3 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  font-family: "Manrope";
+  font-weight: 600;
+}
+
+.seattlemedia-challenge-card ul {
+  padding-left: 1.2rem;
+  line-height: 26px;
+  font-family: "Manrope";
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.seattlemedia-challenge-card ul li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+/* CTA Section */
+.seattlemedia-cta-section {
+  background-image: url(/assets/challange-cta-bg.png);
+  margin-top: 9rem;
+  background-repeat: no-repeat;
+  padding: 90px 0rem 0rem;
+  border-radius: 1rem;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.seattlemedia-cta-content h3 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.seattlemedia-cta-button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Manrope";
+  margin-bottom: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.seattlemedia-cta-button:hover {
+  background: white;
+  color: #333;
+}
+
+.seattlemedia-cta-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.seattlemedia-cta-images img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattlemedia-challenges-title {
+    font-size: 2rem;
+  }
+
+  .seattlemedia-challenges-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seattlemedia-cta-content h3 {
+    font-size: 32px;
+  }
+
+  .seattlemedia-cta-images img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/*Service Section */
+.services-section {
+  padding: 2rem;
+  overflow: hidden;
+  margin: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #666;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.section-header h2 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 76px;
+}
+
+.highlight {
+  color: #1dbdff;
+}
+
+.services-carousel {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.services-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.service-card {
+  flex: 0 0 280px;
+
+  scroll-snap-align: start;
+  min-height: 200px;
+  border-bottom: 1px solid #ffffff33;
+}
+.service-card h3 {
+  font-family: "manrope";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+.service-card p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Manrope";
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  font-family: "Manrope";
+}
+
+@media (min-width: 768px) {
+  .service-card {
+    flex: 0 0 400px;
+  }
+}
+
+/* Timeline section */
+.seattle-new-media-timeline-how-it-works {
+  padding: 80px 20px;
+}
+
+.seattle-new-media-timeline-container {
+  max-width: 1445px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  position: relative;
+}
+
+/* Left Section */
+.seattle-new-media-timeline-left {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.seattle-new-media-timeline-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.seattle-new-media-timeline-title {
+  font-size: 64px;
+  line-height: 76px;
+  font-weight: 400;
+  font-family: "Space Grotesk";
+}
+
+.seattle-new-media-timeline-highlight {
+  color: #1dbdff;
+}
+
+/* Vertical Line */
+.seattle-new-media-timeline-line-track {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 0;
+  width: 2px;
+}
+
+.seattle-new-media-timeline-line-progress {
+  position: absolute;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.55);
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: height 1.5s ease-out;
+  transform-origin: top;
+}
+
+/* Right Timeline Section */
+.seattle-new-media-timeline-timeline {
+  flex: 1 1 55%;
+  position: relative;
+  padding-left: 40px;
+}
+
+.seattle-new-media-timeline-step {
+  position: relative;
+  margin-bottom: 52px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.seattle-new-media-timeline-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seattle-new-media-timeline-marker {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.seattle-new-media-timeline-step.visible .seattle-new-media-timeline-marker {
+  transform: scale(1);
+  margin-top: 8px;
+  box-shadow: 1px 1px 14.5px 1.5px #f1f1f1;
+}
+
+.seattle-new-media-timeline-step-number {
+  font-size: 48px;
+  font-weight: 700;
+  font-weight: bold;
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 1),
+    rgba(42, 78, 178, 0.12)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.seattle-new-media-timeline-step-content h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 36px;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+.seattle-new-media-timeline-step-content {
+  width: 70%;
+}
+.seattle-new-media-timeline-step-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-family: "Manrope";
+}
+.seattle-new-media-timeline-step-column {
+  display: flex;
+  gap: 30px;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .seattle-new-media-timeline-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .seattle-new-media-timeline-line-track {
+    left: 3px;
+  }
+
+  .seattle-new-media-timeline-left,
+  .seattle-new-media-timeline-timeline {
+    padding-left: 0;
+  }
+
+  .seattle-new-media-timeline-timeline {
+    padding-left: 20px;
+  }
+
+  .seattle-new-media-timeline-marker {
+    left: -24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seattle-new-media-timeline-title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .seattle-new-media-timeline-line-track {
+    left: 5px;
+  }
+
+  .seattle-new-media-timeline-step-number {
+    font-size: 1.5rem;
+  }
+
+  .seattle-new-media-timeline-step-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .seattle-new-media-timeline-step-content p {
+    font-size: 0.95rem;
+  }
+
+  .seattle-new-media-timeline-marker {
+    width: 12px;
+    height: 12px;
+    left: -20px;
+  }
+}
+
+/* Testimonial */
+
+.seattle-new-testimonial-cta-testimonial {
+  /* background: linear-gradient(to bottom, #0a1440, #0f1b54); */
+  color: white;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  max-width: 1445px;
+  margin: 0 auto;
+}
+
+.seattle-new-testimonial-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.seattle-new-testimonial-cta-banner {
+  background: linear-gradient(
+    279deg,
+    rgba(114, 118, 143, 0.3),
+    rgba(1, 6, 31, 1)
+  );
+  border-radius: 20px;
+  padding: 27px 40px;
+  display: flex;
+  border: 1px solid #ffffff73;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 88%;
+}
+.seattle-new-testimonial-cta-icon img {
+}
+
+.seattle-new-testimonial-cta-content {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+.seattle-new-testimonial-cta-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 36px;
+  font-weight: 500;
+  font-family: "Manrope";
+}
+
+.seattle-new-testimonial-cta-content p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Manrope";
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.seattle-new-testimonial-cta-button button {
+  background: #3e2dc9;
+  color: white;
+  padding: 19px 41px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.seattle-new-testimonial-carousel {
+  text-align: center;
+  position: relative;
+}
+
+.seattle-new-testimonial-slide {
+  display: none;
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
+}
+.seattle-new-testimonial-slide-column-content {
+  align-content: center;
+  width: 70%;
+  padding: 45px 0px;
+}
+.seattle-new-testimonial-slide.active {
+  display: flex;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seattle-new-testimonial-slide-column-content p {
+  font-size: 28px;
+  font-family: "Space Grotesk";
+  margin-bottom: 20px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.seattle-new-testimonial-author {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+  font-family: "Manrope";
+}
+
+.testimonial-divider {
+  width: 100%;
+  height: 1px;
+  background: #ffffff40;
+  margin: 20px 0;
+}
+.seattle-new-testimonial-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+}
+
+.seattle-new-testimonial-carousel-dots {
+  margin-top: 20px;
+}
+
+.seattle-new-testimonial-carousel-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.seattle-new-testimonial-carousel-dots span.active {
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .seattle-new-testimonial-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seattle-new-testimonial-cta-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .seattle-new-testimonial-slide blockquote {
+    font-size: 1rem;
+  }
+}
+
+/* integration */
+
+.seattle-new-integration-section {
+  /* background: linear-gradient(to bottom, #0a1440, #0f1b54); */
+  color: white;
+  padding: 80px 20px;
+}
+
+.seattle-new-integration-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1445px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.seattle-new-integration-content {
+  flex: 1 1 500px;
+}
+
+.seattle-new-integration-content h2 {
+  font-size: 64px;
+  line-height: 76px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.seattle-new-integration-content .highlight {
+  color: #00baff;
+}
+
+.seattle-new-integration-content p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-family: "Manrope";
+  color: rgba(255, 255, 255, 0.6);
+}
+.blurred-circle {
+  width: 800px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: rgba(29, 189, 255, 1);
+  filter: blur(300px);
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.seattle-new-integration-graphic {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.seattle-new-integration-graphic img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattle-new-integration-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seattle-new-integration-content h2 {
+    font-size: 40px;
+  }
+
+  .seattle-new-integration-content p {
+    font-size: 0.95rem;
+    line-height: 46px;
+  }
+}
+
+/* Project Section */
+
+.seattlemedia-projects {
+  padding: 100px 20px;
+
+  color: #fff;
+  text-align: center;
+}
+
+.seattlemedia-projects-heading {
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  line-height: 76px;
+}
+
+.seattlemedia-projects-heading span {
+  color: #16cbf7;
+}
+
+.seattlemedia-projects-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.seattlemedia-project-card {
+  flex: 1 1 300px;
+}
+
+.seattlemedia-project-image {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.seattlemedia-project-description {
+  font-size: 24px;
+  line-height: 36px;
+  padding: 0 10px;
+  text-align: left;
+  font-weight: 400;
+  font-family: "Manrope";
+}
+
+/* Button */
+.seattlemedia-projects-btn-wrap {
+  margin-top: 60px;
+}
+
+.seattlemedia-projects-btn {
+  display: inline-block;
+  padding: 19px 41px;
+  border-radius: 38px;
+  background: rgba(62, 45, 201, 1);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.seattlemedia-projects-btn:hover {
+  background: #00d4ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattlemedia-projects-heading {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .seattlemedia-projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seattlemedia-project-card {
+    max-width: 100%;
+  }
+}
+
+/* Google Review */
+.seattle-google-review-section {
+  background: url("/assets/google-review-bg-line.png") no-repeat center top;
+
+  padding: 120px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.seattle-google-review-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 175px;
+}
+
+.seattle-google-review-quote {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.seattle-google-review-author {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.seattle-google-review-author a {
+  color: #1dbdff;
+  text-decoration: none;
+}
+.blurred-circle2 {
+  width: 100%;
+  height: 350px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
+
+  filter: blur(300px);
+  position: absolute;
+  left: 0%;
+  z-index: -1;
+}
+.seattle-google-review-rating-box {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 40px;
+  backdrop-filter: blur(6px);
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.seattle-google-review-rating-item {
+  text-align: center;
+}
+
+.seattle-google-review-rating-item .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.seattle-google-review-rating-item .score {
+  font-size: 0.9rem;
+  color: #ccc;
+  display: block;
+}
+
+.seattle-google-review-rating-item .stars {
+  font-size: 1rem;
+  color: gold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattle-google-review-quote {
+    font-size: 1.5rem;
+  }
+
+  .seattle-google-review-rating-box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* Client Slider*/
+
+.seattle-client-slider {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1445px;
+}
+
+.seattle-client-slider-track {
+  display: flex;
+  gap: 60px;
+  animation: scrollSlider 30s linear infinite;
+  width: max-content;
+}
+
+.seattle-client-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seattle-client-logo img {
+  height: auto;
+  width: 190px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.seattle-client-logo img:hover {
+  opacity: 1;
+}
+
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattle-client-slider-track {
+    gap: 40px;
+  }
+
+  .seattle-client-logo img {
+    height: 30px;
+  }
+}
+
+/* -webflow- */
+
+.seattle-webflow-section {
+  padding: 140px 0 20px;
+  color: #ffffff;
+}
+
+.seattle-webflow-container {
+  max-width: 1445px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.seattle-webflow-left {
+  flex: 1 1 55%;
+}
+
+.seattle-webflow-right {
+  flex: 1 1 35%;
+}
+
+.seattle-webflow-title {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 76px;
+  margin: 0;
+}
+
+.seattle-webflow-blue {
+  color: rgba(29, 189, 255, 1);
+}
+
+.seattle-webflow-white {
+  color: #ffffff;
+}
+
+.seattle-webflow-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Manrope";
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seattle-webflow-container {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .seattle-webflow-title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .seattle-webflow-left,
+  .seattle-webflow-right {
+    flex: 1 1 100%;
+  }
+}
+
+/* FAQ */
+.seattle-faq-section {
+  position: relative;
+  background: url("/assets/about-us-bg-img.webp") no-repeat center center/cover;
+  padding: 100px 20px 160px 20px;
+  overflow: hidden;
+}
+
+.seattle-faq-glow {
+  position: absolute;
+  width: 340px;
+  height: 320px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
+
+  filter: blur(140px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.seattle-faq-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+
+  padding-top: 135px;
+}
+
+.seattle-faq-label {
+  display: inline-block;
+  background-color: #192c57;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.seattle-faq-title {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 76px;
+}
+
+.seattle-faq-highlight {
+  color: #00bfff;
+}
+
+.seattle-faq-accordion {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.seattle-faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(217, 217, 217, 0.12);
+  border-radius: 40px;
+  padding: 20px 30px;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.seattle-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.seattle-faq-toggle {
+  font-size: 1.5rem;
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 134px;
+  border: 1px solid rgba(217, 217, 217, 0.12);
+  width: 31px;
+  height: 31px;
+  text-align: center;
+}
+
+.seattle-faq-answer {
+  display: none;
+  padding-top: 10px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.seattle-faq-item.active .seattle-faq-answer {
+  display: block;
+}
+
+.seattle-faq-item.active .seattle-faq-toggle {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .seattle-faq-title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .seattle-faq-item {
+    padding: 16px 20px;
+  }
+
+  .seattle-faq-question {
+    font-size: 0.95rem;
+  }
+}
+
+/* Footer Section */
+/* CTA Section */
+.seattle-footer-cta {
+  background: linear-gradient(
+      to bottom,
+      #130b3257 0%,
+      #1dbdff61 100%,
+      #130b32 100%
+    ),
+    url(/assets/footer-img-01.png) no-repeat top;
+  text-align: center;
+  padding: 235px 20px;
+  position: relative;
+  color: #fff;
+}
+.seattle-footer-cta-inner h2 {
+  font-size: 48px;
+  margin-bottom: 1rem;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.seattle-footer-cta-inner p {
+  font-size: 16px;
+  color: white;
+  line-height: 28px;
+  max-width: 810px;
+  margin: 0 auto 2rem;
+}
+
+.seattle-footer-btn {
+  padding: 16px 40px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+  font-size: 16px;
+  font-family: "Manrope";
+}
+
+.seattle-footer-btn:hover {
+  background: #fff;
+  color: #0f1534;
+}
+
+/* Footer */
+.seattle-footer {
+  background: linear-gradient(
+    to top,
+    #130b3200 0%,
+    #1dbdff61 100%,
+    #130b32 100%
+  );
+  color: #cbd5e1;
+}
+
+.seattle-footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1445px;
+  padding: 60px 20px 30px;
+  margin: 0 auto;
+}
+
+.seattle-footer-logo {
+  width: 170px;
+  margin-bottom: 15px;
+}
+.seattle-footer-col a {
+  color: white;
+  text-decoration: none;
+}
+.seattle-footer-col.foot-keep-in-touch h4 {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Manrope";
+}
+
+.seattle-footer-tagline {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.seattle-footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.seattle-footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.seattle-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 26px;
+}
+.location-foot {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 1);
+  line-height: 26px;
+}
+.seattle-footer-col ul li {
+  margin-bottom: 8px;
+}
+.seattle-footer-col.foot-head-color p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Manrope";
+  margin-bottom: 10px;
+}
+.seattle-footer-badge {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 4px 12px;
+
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+.seattle-footer-bottom {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 40px 0;
+  font-size: 14px;
+  margin-top: 40px;
+
+  font-weight: 400;
+  font-family: "Manrope";
+}
+.seattle-footer-bottom a {
+  color: #cbd5e1;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .seattle-footer-content {
+    grid-template-columns: 1fr; /* Stack vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  .seattlemedia-challenges-section {
+    padding: 20px 15px;
+  }
+  .seattlemedia-challenges-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .seattlemedia-cta-images img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .services-section {
+    margin: 30px 0;
+  }
+  .section-header h2 {
+    font-size: 40px;
+
+    line-height: 46px;
+  }
+  .seattlemedia-section-label {
+    margin-bottom: 20px;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  .seattle-new-media-timeline-how-it-works {
+    padding: 10px 20px;
+  }
+  .seattle-new-testimonial-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+  }
+  .seattle-new-testimonial-slide-column-content {
+    align-content: center;
+    width: 100%;
+    padding: 45px 0px;
+    text-align: center;
+  }
+  .seattle-new-testimonial-carousel {
+    padding: 0 15px;
+  }
+  .seattle-new-testimonial-slide-column-content p {
+    font-size: 20px;
+
+    line-height: 30px;
+  }
+  .seattle-new-integration-section {
+    padding: 20px 20px;
+  }
+  .seattle-new-integration-graphic {
+    flex: unset;
+    text-align: center;
+  }
+  .seattlemedia-projects {
+    padding: 30px 20px;
+  }
+  .seattlemedia-project-description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .seattle-webflow-section {
+    padding: 40px 0 20px;
+  }
+  .seattle-webflow-right {
+    padding: 0 15px;
+  }
+  .seattle-faq-container {
+    padding-top: 70px;
+  }
+  .seattle-footer-cta-inner h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    line-height: 48px;
+    font-weight: 400;
+  }
+  .seattle-footer-cta {
+    padding: 155px 20px 55px 20px;
+  }
+  .seattle-footer-content {
+    gap: 30px;
+  }
+  .seattle-new-testimonial-cta-icon {
+    width: 100%;
+    text-align: center;
+  }
+  .seattle-new-testimonial-cta-banner {
+    width: 100%;
+  }
+  .seattle-new-testimonial-cta-testimonial {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .seattlemedia-challenge-card {
+    max-width: 380px;
+    width: 100%;
+    height: 340px;
+  }
+  section.seattle-new-testimonial-cta-testimonial {
+    padding: 0 20px;
+}
+.seattle-webflow-section {
+    padding: 140px  20px 0 20px;
+}
+}
+
+.seattle-footer-bottom a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
