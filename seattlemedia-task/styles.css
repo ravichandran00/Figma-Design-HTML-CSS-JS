@@ -1,4 +1,12 @@
-/* Reset and base styles */
+:root {
+  --primary-color: #130b32;
+  --secondary-color: #ffffff;
+  --btn-color: #3e2dc9;
+  --font-size-base: 16px;
+  --font-family-heading: "Space Grotesk", sans-serif;
+  --font-family-manrope: "Manrope", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,17 +14,16 @@
 }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-family-heading);
   color: white;
-
-  background: #130b32;
+  background: var(--primary-color);
 }
 
 /* Header layout */
 .seattlemedia-header {
   position: sticky;
   top: 0;
-  background-color: #130b32;
+  background-color: var(--primary-color);
   z-index: 1000;
   width: 100%;
   padding: 1rem 0 0;
@@ -33,7 +40,11 @@ body {
   align-items: center;
   border-bottom: 1px solid #ffffff33;
 }
-
+.seattlemedia-nav a:nth-last-child(2) {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
 /* Logo */
 .seattlemedia-logo {
   font-size: 1.5rem;
@@ -54,7 +65,7 @@ body {
   color: white;
   font-weight: 600;
   font-size: 16px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   transition: color 0.3s ease;
 }
 
@@ -65,11 +76,11 @@ body {
 /* Contact us button */
 .seattlemedia-contact-btn {
   padding: 19px 41px;
-  background-color: #3e2dc9;
+  background-color: var(--btn-color);
   border: none;
   color: white;
   font-weight: 600;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   font-size: 16px;
   border-radius: 38px;
   cursor: pointer;
@@ -77,7 +88,7 @@ body {
 }
 
 .seattlemedia-contact-btn:hover {
-  background-color: #e6b800;
+  background-color: #7344cd;
 }
 
 /* Mobile menu toggle (hamburger) */
@@ -118,6 +129,9 @@ body {
     transition: right 0.3s ease;
     z-index: 999;
   }
+  .seattlemedia-header .seattlemedia-container {
+    border-bottom: unset;
+  }
   .seattlemedia-header {
     padding: 10px 15px;
   }
@@ -132,11 +146,11 @@ body {
   }
 
   /* Full width contact button in mobile menu */
- .seattlemedia-contact-btn.mobile-btn {
+  .seattlemedia-contact-btn.mobile-btn {
     width: 100%;
     text-align: center;
     padding: 12px 20px;
-}
+  }
 }
 
 /* Desktop overrides */
@@ -205,7 +219,7 @@ body {
   .seattlemedia-hero {
     flex-direction: row;
     justify-content: space-between;
-            padding: 60px 0 0 0;
+    padding: 60px 0 0 0;
     display: block;
   }
   .seattlemedia-header {
@@ -260,7 +274,7 @@ body {
   gap: 0.5rem;
   color: white;
   font-size: 16px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
   padding: 8px 15px;
@@ -313,12 +327,12 @@ body {
   /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
   padding: 5rem 1.5rem;
   color: white;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
-    #130b32 15%,
+    var(--primary-color); 15%,
     #1dbdff61 50%,
-    #130b32 100%
-  );
+    var(--primary-color); 100%
+  ); */
   padding: 5rem 1.5rem;
   color: white;
   position: relative;
@@ -354,7 +368,7 @@ body {
 .div-section {
   width: 100%;
   height: 1px;
-  background: #ffffff33;
+  background: rgba(255, 255, 255, 0.3);
   margin: 0 auto;
   max-width: 1440px;
 }
@@ -364,20 +378,20 @@ body {
   border-radius: 16px;
   padding: 2rem;
   flex: 1 1 300px;
-  max-width: 465px;
+  max-width: 400px;
 }
 
 .seattlemedia-challenge-card h3 {
   font-size: 28px;
   margin-bottom: 1rem;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   font-weight: 600;
 }
 
 .seattlemedia-challenge-card ul {
   padding-left: 1.2rem;
   line-height: 26px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -411,7 +425,7 @@ body {
   border-radius: 9999px;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   margin-bottom: 2rem;
   transition: background 0.3s, color 0.3s;
 }
@@ -510,7 +524,7 @@ body {
   border-bottom: 1px solid #ffffff33;
 }
 .service-card h3 {
-  font-family: "manrope";
+  font-family: var(--font-family-manrope);
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
@@ -519,7 +533,7 @@ body {
 .service-card p {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   line-height: 26px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 40px;
@@ -536,7 +550,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   color: white;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 @media (min-width: 768px) {
@@ -577,7 +591,7 @@ body {
   font-size: 64px;
   line-height: 76px;
   font-weight: 400;
-  font-family: "Space Grotesk";
+  font-family: var(--font-family-heading);
 }
 
 .seattle-new-media-timeline-highlight {
@@ -660,7 +674,7 @@ body {
   margin: 0 0 10px;
   font-size: 24px;
   line-height: 36px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   font-weight: 500;
 }
 .seattle-new-media-timeline-step-content {
@@ -672,7 +686,7 @@ body {
   line-height: 26px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 .seattle-new-media-timeline-step-column {
   display: flex;
@@ -765,8 +779,6 @@ body {
   flex-wrap: wrap;
   width: 88%;
 }
-.seattle-new-testimonial-cta-icon img {
-}
 
 .seattle-new-testimonial-cta-content {
   flex: 1 1 auto;
@@ -778,26 +790,29 @@ body {
   margin-bottom: 20px;
   line-height: 36px;
   font-weight: 500;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 .seattle-new-testimonial-cta-content p {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .seattle-new-testimonial-cta-button button {
-  background: #3e2dc9;
+  background: var(--btn-color);
   color: white;
   padding: 19px 41px;
-  border-radius: 25px;
+  border-radius: 55px;
   border: none;
   font-size: 16px;
   cursor: pointer;
 }
 
+.seattle-new-testimonial-cta-button button:hover {
+  background: #7344cd;
+}
 .seattle-new-testimonial-carousel {
   text-align: center;
   position: relative;
@@ -832,7 +847,7 @@ body {
 
 .seattle-new-testimonial-slide-column-content p {
   font-size: 28px;
-  font-family: "Space Grotesk";
+  font-family: var(--font-family-heading);
   margin-bottom: 20px;
   line-height: 40px;
   font-weight: 400;
@@ -844,13 +859,13 @@ body {
   align-items: center;
   text-align: left;
   gap: 15px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 .testimonial-divider {
   width: 100%;
   height: 1px;
-  background: #ffffff40;
+  background: rgba(255, 255, 255, 0.25);
   margin: 20px 0;
 }
 .seattle-new-testimonial-author img {
@@ -930,14 +945,15 @@ body {
   line-height: 28px;
   margin-bottom: 20px;
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   color: rgba(255, 255, 255, 0.6);
 }
 .blurred-circle {
   width: 800px;
   height: 600px;
   border-radius: 50%;
-  background-color: rgba(29, 189, 255, 1);
+  background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
+
   filter: blur(300px);
   position: absolute;
   right: 0;
@@ -963,11 +979,12 @@ body {
 
   .seattle-new-integration-content h2 {
     font-size: 40px;
+    line-height: 46px;
   }
 
   .seattle-new-integration-content p {
-    font-size: 0.95rem;
-    line-height: 46px;
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 
@@ -1015,7 +1032,7 @@ body {
   padding: 0 10px;
   text-align: left;
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 /* Button */
@@ -1036,7 +1053,7 @@ body {
 }
 
 .seattlemedia-projects-btn:hover {
-  background: #00d4ff;
+  background: #7344cd;
 }
 
 /* Responsive */
@@ -1091,10 +1108,7 @@ body {
 .blurred-circle2 {
   width: 100%;
   height: 350px;
-  border-radius: 50%;
-
   background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
-
   filter: blur(300px);
   position: absolute;
   left: 0%;
@@ -1154,8 +1168,8 @@ body {
   margin: 0 auto;
   overflow: hidden;
   padding: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(29, 189, 255, 0.29);
+  border-bottom: 1px solid rgba(29, 189, 255, 0.29);
   max-width: 1445px;
 }
 
@@ -1196,11 +1210,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .seattle-client-slider-track {
-    gap: 40px;
-  }
-
-  .seattle-client-logo img {
-    height: 30px;
+    gap: 15px;
   }
 }
 
@@ -1248,7 +1258,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.6);
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   font-weight: 400;
 }
 
@@ -1349,7 +1359,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   font-weight: 400;
   line-height: 28px;
 }
@@ -1399,19 +1409,7 @@ body {
 
 /* Footer Section */
 /* CTA Section */
-.seattle-footer-cta {
-  background: linear-gradient(
-      to bottom,
-      #130b3257 0%,
-      #1dbdff61 100%,
-      #130b32 100%
-    ),
-    url(/assets/footer-img-01.png) no-repeat top;
-  text-align: center;
-  padding: 235px 20px;
-  position: relative;
-  color: #fff;
-}
+
 .seattle-footer-cta-inner h2 {
   font-size: 48px;
   margin-bottom: 1rem;
@@ -1436,7 +1434,7 @@ body {
   display: inline-block;
   transition: background 0.3s;
   font-size: 16px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 .seattle-footer-btn:hover {
@@ -1446,13 +1444,10 @@ body {
 
 /* Footer */
 .seattle-footer {
-  background: linear-gradient(
-    to top,
-    #130b3200 0%,
-    #1dbdff61 100%,
-    #130b32 100%
-  );
   color: #cbd5e1;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .seattle-footer-content {
@@ -1468,24 +1463,29 @@ body {
   width: 170px;
   margin-bottom: 15px;
 }
+
 .seattle-footer-col a {
   color: white;
   text-decoration: none;
 }
+
 .seattle-footer-col.foot-keep-in-touch h4 {
   font-weight: 500;
   font-size: 20px;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 
 .seattle-footer-tagline {
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-family: var(--font-family-manrope);
 }
 
 .seattle-footer-desc {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: var(--font-family-manrope);
 }
 
 .seattle-footer-col h4 {
@@ -1506,6 +1506,7 @@ body {
   font-size: 14px !important;
   color: rgba(255, 255, 255, 1);
   line-height: 26px;
+  opacity: 100% !important;
 }
 .seattle-footer-col ul li {
   margin-bottom: 8px;
@@ -1513,17 +1514,18 @@ body {
 .seattle-footer-col.foot-head-color p {
   font-size: 16px;
   font-weight: 500;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
   margin-bottom: 10px;
+  opacity: 50%;
 }
 .seattle-footer-badge {
   display: inline-block;
   margin-top: 20px;
-  padding: 4px 12px;
-
+  padding: 6px 12px;
+  font-family: var(--font-family-manrope);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.36);
-  font-size: 0.8rem;
+  font-size: 14px;
   border-radius: 6px;
 }
 .seattle-footer-bottom {
@@ -1532,9 +1534,8 @@ body {
   padding: 40px 0;
   font-size: 14px;
   margin-top: 40px;
-
   font-weight: 400;
-  font-family: "Manrope";
+  font-family: var(--font-family-manrope);
 }
 .seattle-footer-bottom a {
   color: #cbd5e1;
@@ -1644,17 +1645,57 @@ body {
   .seattlemedia-challenge-card {
     max-width: 380px;
     width: 100%;
-    height: 340px;
+    /* height: 340px; */
   }
   section.seattle-new-testimonial-cta-testimonial {
     padding: 0 20px;
-}
-.seattle-webflow-section {
-    padding: 140px  20px 0 20px;
-}
+  }
+  .seattle-webflow-section {
+    padding: 140px 20px 0 20px;
+  }
+  img.foter-fade-imag {
+    width: 100%;
+  }
 }
 
 .seattle-footer-bottom a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.background-blur {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
+  filter: blur(550px); /* Adds the blur */
+  z-index: -1; /* Push it behind content */
+  left: 0;
+}
+
+.background-blur2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #3837bf 4.19%, #1dbdff 116.01%);
+  filter: blur(550px); /* Adds the blur */
+  z-index: -1; /* Push it behind content */
+  left: 0;
+}
+
+img.foter-fade-imag {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  right: 0;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgb(0 0 0 / 35%));
+  z-index: -2;
+  margin: 0 auto;
+}
+
+.seattle-footer-cta {
+  text-align: center;
+  padding: 235px 20px;
+  position: relative;
+  color: #fff;
 }
