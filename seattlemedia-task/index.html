@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seattle New Media</title>
+    <title>Logoipsum</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -16,8 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <script src="Script.js"></script>
-  </head>
+    </head>
   <body>
     <header class="seattlemedia-header">
       <div class="seattlemedia-container">
@@ -33,7 +32,12 @@
           <a href="#">About us</a>
           <a href="#">Portfolio</a>
           <a href="#">Blog</a>
-          <a href="#">Services</a>
+          <a href="#"
+            >Services
+            <img
+              src="/assets/fi-rr-arrow-small-right.png"
+              alt="Down arror icon"
+          /></a>
           <button class="seattlemedia-contact-btn mobile-btn">
             Contact us
           </button>
@@ -71,14 +75,20 @@
         <h2 class="seattlemedia-challenges-title">
           <span class="highlight">Challenges</span> Faced<br />by Agencies
         </h2>
-
+        <div class="background-blur"></div>
         <div class="seattlemedia-challenges-grid">
           <div class="card-gradient-border">
             <div class="seattlemedia-challenge-card">
               <h3>Design and Development Bottlenecks</h3>
               <ul>
-                <li>Ut amet facilisis convallis nisl.</li>
-                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>
+                  Ut amet facilisis convallis nisl. Tortor orci at metus leo
+                  velit neque at sagittis aliquam. Integer amet nisl.
+                </li>
+                <li>
+                  Facilisis massa interdum pretium tristique leo dignissim
+                  rhoncus imperdiet commodo. Et habitant.
+                </li>
                 <li>Lorem ipsum dolor sit amet consectetur.</li>
               </ul>
             </div>
@@ -87,8 +97,14 @@
             <div class="seattlemedia-challenge-card">
               <h3>Maintaining Brand Consistency</h3>
               <ul>
-                <li>Ut amet facilisis convallis nisl.</li>
-                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>
+                  Ut amet facilisis convallis nisl. Tortor orci at metus leo
+                  velit neque at sagittis aliquam. Integer amet nisl.
+                </li>
+                <li>
+                  Facilisis massa interdum pretium tristique leo dignissim
+                  rhoncus imperdiet commodo. Et habitant.
+                </li>
                 <li>Lorem ipsum dolor sit amet consectetur.</li>
               </ul>
             </div>
@@ -97,8 +113,14 @@
             <div class="seattlemedia-challenge-card">
               <h3>Scaling Website <br />Projects</h3>
               <ul>
-                <li>Ut amet facilisis convallis nisl.</li>
-                <li>Facilisi massa interdum pretium tristique.</li>
+                <li>
+                  Ut amet facilisis convallis nisl. Tortor orci at metus leo
+                  velit neque at sagittis aliquam. Integer amet nisl.
+                </li>
+                <li>
+                  Facilisis massa interdum pretium tristique leo dignissim
+                  rhoncus imperdiet commodo. Et habitant.
+                </li>
                 <li>Lorem ipsum dolor sit amet consectetur.</li>
               </ul>
             </div>
@@ -587,7 +609,9 @@
 
     <!--Footer Section -->
     <div class="footer-bg">
-      <section class="seattle-footer-cta">
+      <div class="background-blur2"></div>
+      <div class="seattle-footer-cta">
+        <img src="/assets/footer-img-01.png" class="foter-fade-imag" />
         <div class="seattle-footer-cta-inner">
           <h2>Let’s Build Something Amazing Together</h2>
           <p>
@@ -598,7 +622,7 @@
           </p>
           <a href="#" class="seattle-footer-btn">Let’s connect</a>
         </div>
-      </section>
+      </div>
 
       <footer class="seattle-footer">
         <div class="div-section"></div>
@@ -621,7 +645,9 @@
           <div class="seattle-footer-col foot-keep-in-touch">
             <h4>Keep in touch</h4>
             <a href="mailto:hello@websnap.agency">hello@websnap.agency</a>
-            <div class="seattle-footer-badge">🛡️ Enterprise Partner</div>
+            <div class="seattle-footer-badge">
+              <img src="/assets/webflow-icon.png" /> Enterprise Partner
+            </div>
           </div>
 
           <div class="seattle-footer-col foot-head-color">
@@ -731,12 +757,10 @@
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Reveal steps with animation
               steps.forEach((step, index) => {
                 setTimeout(() => {
                   step.classList.add("visible");
 
-                  // After the last step is visible, calculate height to last marker
                   if (index === steps.length - 1) {
                     const lastMarker = step.querySelector(
                       ".seattle-new-media-timeline-marker"
@@ -744,14 +768,13 @@
                     const markerRect = lastMarker.getBoundingClientRect();
                     const timelineRect = timeline.getBoundingClientRect();
                     console.log(markerRect);
-                    // Calculate the distance from top of timeline to center of marker
+
                     const markerOffset =
                       markerRect.top -
                       timelineRect.top +
                       markerRect.height / 2 -
                       35;
 
-                    // Apply height to progress line
                     progressLine.style.height = `${markerOffset}px`;
                   }
                 }, index * 300);
