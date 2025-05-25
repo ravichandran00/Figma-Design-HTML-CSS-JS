@@ -112,7 +112,7 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 959px) {
   /* Hide desktop nav initially on mobile */
   .seattlemedia-nav {
     position: fixed;
@@ -154,7 +154,7 @@ body {
 }
 
 /* Desktop overrides */
-@media (min-width: 769px) {
+@media (min-width: 959px) {
   .seattlemedia-nav {
     position: static;
     flex-direction: row;
@@ -324,19 +324,14 @@ body {
   ); /* Gradient border */
 }
 .seattlemedia-challenges-section {
-  /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+ 
   padding: 5rem 1.5rem;
   color: white;
-  /* background: linear-gradient(
-    to bottom,
-    var(--primary-color); 15%,
-    #1dbdff61 50%,
-    var(--primary-color); 100%
-  ); */
+
   padding: 5rem 1.5rem;
   color: white;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .seattlemedia-container {
@@ -1305,7 +1300,7 @@ body {
 
 .seattle-faq-container {
   position: relative;
-  z-index: 2;
+  z-index: 0;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -1698,4 +1693,122 @@ img.foter-fade-imag {
   padding: 235px 20px;
   position: relative;
   color: #fff;
+}
+
+/* Form CSS */
+.popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(19 11 50 / 87%);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease forwards;
+      z-index: 9999;
+    }
+
+  .popup-form {
+    position: relative;
+   
+    padding: 25px 45px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 40%;
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.3); */
+    opacity: 0;
+    transform: scale(0.9);
+    animation: popupFadeIn 0.3s ease forwards;
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popupFadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .popup-form h2 {
+      margin-top: 0;
+      font-size: 30px;
+      margin-bottom: 35px;
+      font-family: var(--font-family-manrope);
+    }
+
+    .popup-form input,
+    .popup-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+     
+      background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 217, 217, 0.12);
+    }
+.popup-form input {
+  height: 55px;
+  
+}
+.popup-form textarea {
+    height: 140px;
+   
+}
+    .popup-form button.submit-btn {
+    padding: 16px 20px;
+    background: var(--btn-color);
+    border: none;
+    border-radius: 55px;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .close-icon {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-icon:hover {
+      color: #000;
+    }
+
+@media (max-width:860px) { 
+
+.popup-form {
+   padding: 25px 20px;
+    width: 100%;
+    margin: 0 25px;
+  
+    top: 3%;
+}
+.popup-form h2 {
+    
+    margin-bottom: 20px;
+   
+}
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
 }

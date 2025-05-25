@@ -16,12 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    </head>
+  </head>
   <body>
     <header class="seattlemedia-header">
       <div class="seattlemedia-container">
         <div class="seattlemedia-logo">
-          <img src="/assets/header-logo.png" alt="Logo" />
+          <img src="/assets/header-logo.png" alt="Logo" loading="lazy"/>
         </div>
 
         <button class="seattlemedia-menu-toggle" id="menu-toggle">
@@ -36,9 +36,12 @@
             >Services
             <img
               src="/assets/fi-rr-arrow-small-right.png"
-              alt="Down arror icon"
+              alt="Down arror icon" loading="lazy"
           /></a>
-          <button class="seattlemedia-contact-btn mobile-btn">
+          <button
+            class="seattlemedia-contact-btn mobile-btn"
+            onclick="openPopup()"
+          >
             Contact us
           </button>
         </nav>
@@ -51,7 +54,7 @@
       </div>
       <div class="seattlemedia-hero-graphics">
         <!-- Optional: Add SVG or background image here -->
-        <img src="/assets/hero-section-img.webp" alt="Hero Image" />
+        <img src="/assets/hero-section-img.webp" alt="Hero Image" loading="lazy"/>
       </div>
       <div class="seattlemedia-about-section">
         <div class="seattlemedia-container">
@@ -137,7 +140,7 @@
           </h3>
           <button class="seattlemedia-cta-button">Read More →</button>
           <div class="seattlemedia-cta-images">
-            <img src="/assets/challange-cta-img.webp" alt="Example 1" />
+            <img src="/assets/challange-cta-img.webp" alt="Example 1" loading="lazy"/>
           </div>
         </div>
       </div>
@@ -290,7 +293,7 @@
     <section class="seattle-new-testimonial-cta-testimonial">
       <div class="seattle-new-testimonial-cta">
         <div class="seattle-new-testimonial-cta-icon">
-          <img src="/assets/cta-icon.png" alt="Chat icon" />
+          <img src="/assets/cta-icon.png" alt="Chat icon" loading="lazy"/>
         </div>
         <div class="seattle-new-testimonial-cta-banner">
           <div class="seattle-new-testimonial-cta-content">
@@ -301,7 +304,7 @@
             </p>
           </div>
           <div class="seattle-new-testimonial-cta-button">
-            <button>Contact us</button>
+            <button onclick="openPopup()">Contact us</button>
           </div>
         </div>
       </div>
@@ -310,7 +313,7 @@
       <div class="seattle-new-testimonial-carousel">
         <div class="seattle-new-testimonial-slide active">
           <div class="seattle-new-testimonial-slide-column">
-            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" loading="lazy"/>
           </div>
           <div class="seattle-new-testimonial-slide-column-content">
             <p>
@@ -320,7 +323,7 @@
             </p>
             <div class="testimonial-divider"></div>
             <div class="seattle-new-testimonial-author">
-              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" loading="lazy"/>
               <div>
                 <strong>Sierra Johnson</strong><br />
                 <span>Sr UX Designer, AWS</span>
@@ -331,7 +334,7 @@
 
         <div class="seattle-new-testimonial-slide">
           <div class="seattle-new-testimonial-slide-column">
-            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" loading="lazy"/>
           </div>
           <div class="seattle-new-testimonial-slide-column-content">
             <p>
@@ -341,7 +344,7 @@
             </p>
             <div class="testimonial-divider"></div>
             <div class="seattle-new-testimonial-author">
-              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" loading="lazy"/>
               <div>
                 <strong>Sierra Johnson</strong><br />
                 <span>Sr UX Designer, AWS</span>
@@ -352,7 +355,7 @@
 
         <div class="seattle-new-testimonial-slide">
           <div class="seattle-new-testimonial-slide-column">
-            <img src="/assets/blackquotes-img.png" alt="Blackquotes" />
+            <img src="/assets/blackquotes-img.png" alt="Blackquotes" loading="lazy"/>
           </div>
           <div class="seattle-new-testimonial-slide-column-content">
             <p>
@@ -362,7 +365,7 @@
             </p>
             <div class="testimonial-divider"></div>
             <div class="seattle-new-testimonial-author">
-              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" />
+              <img src="/assets/testimonials-image.png" alt="Sierra Johnson" loading="lazy"/>
               <div>
                 <strong>Sierra Johnson</strong><br />
                 <span>Sr UX Designer, AWS</span>
@@ -408,7 +411,7 @@
 
         <!-- Right Visual -->
         <div class="seattle-new-integration-graphic">
-          <img src="/assets/integration-img.png" alt="Integration Icons" />
+          <img src="/assets/integration-img.png" alt="Integration Icons" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -428,6 +431,7 @@
               src="/assets/project-image-01.png"
               alt="Project 1"
               class="seattlemedia-project-image"
+              loading="lazy"
             />
             <p class="seattlemedia-project-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -441,6 +445,7 @@
               src="/assets/project-image-02.png"
               alt="Project 2"
               class="seattlemedia-project-image"
+              loading="lazy"
             />
             <p class="seattlemedia-project-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -468,7 +473,7 @@
         </p>
 
         <div class="seattle-google-review-rating-box">
-          <img src="/assets/rating-img.png" />
+          <img src="/assets/rating-img.png" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -477,42 +482,42 @@
     <section class="seattle-client-slider">
       <div class="seattle-client-slider-track" id="seattleClientSliderTrack">
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-01.png" alt="Client 1" />
+          <img src="/assets/Slider-logo-01.png" alt="Client 1" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-02.png" alt="Client 2" />
+          <img src="/assets/Slider-logo-02.png" alt="Client 2" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-03.png" alt="Client 3" />
+          <img src="/assets/Slider-logo-03.png" alt="Client 3" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-04.png" alt="Client 4" />
+          <img src="/assets/Slider-logo-04.png" alt="Client 4" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-05.png" alt="Client 5" />
+          <img src="/assets/Slider-logo-05.png" alt="Client 5" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-06.png" alt="Client 6" />
+          <img src="/assets/Slider-logo-06.png" alt="Client 6" loading="lazy"/>
         </div>
 
         <!-- Duplicate for seamless loop -->
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-01.png" alt="Client 1" />
+          <img src="/assets/Slider-logo-01.png" alt="Client 1" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-02.png" alt="Client 2" />
+          <img src="/assets/Slider-logo-02.png" alt="Client 2" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-03.png" alt="Client 3" />
+          <img src="/assets/Slider-logo-03.png" alt="Client 3" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-04.png" alt="Client 4" />
+          <img src="/assets/Slider-logo-04.png" alt="Client 4" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-05.png" alt="Client 5" />
+          <img src="/assets/Slider-logo-05.png" alt="Client 5" loading="lazy"/>
         </div>
         <div class="seattle-client-logo">
-          <img src="/assets/Slider-logo-06.png" alt="Client 6" />
+          <img src="/assets/Slider-logo-06.png" alt="Client 6" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -547,7 +552,7 @@
     <section class="seattle-faq-section">
       <div class="seattle-new-testimonial-cta">
         <div class="seattle-new-testimonial-cta-icon">
-          <img src="/assets/cta-icon.png" alt="Chat icon" />
+          <img src="/assets/cta-icon.png" alt="Chat icon" loading="lazy"/>
         </div>
         <div class="seattle-new-testimonial-cta-banner">
           <div class="seattle-new-testimonial-cta-content">
@@ -558,7 +563,7 @@
             </p>
           </div>
           <div class="seattle-new-testimonial-cta-button">
-            <button>Contact us</button>
+            <button onclick="openPopup()">Contact us</button>
           </div>
         </div>
       </div>
@@ -611,7 +616,7 @@
     <div class="footer-bg">
       <div class="background-blur2"></div>
       <div class="seattle-footer-cta">
-        <img src="/assets/footer-img-01.png" class="foter-fade-imag" />
+        <img src="/assets/footer-img-01.png" class="foter-fade-imag" loading="lazy"/>
         <div class="seattle-footer-cta-inner">
           <h2>Let’s Build Something Amazing Together</h2>
           <p>
@@ -632,6 +637,7 @@
               src="/assets/footer-logo.png"
               alt="Logo"
               class="seattle-footer-logo"
+              loading="lazy"
             />
             <p class="seattle-footer-tagline">We make the web a snap!</p>
             <p class="seattle-footer-desc">
@@ -646,7 +652,7 @@
             <h4>Keep in touch</h4>
             <a href="mailto:hello@websnap.agency">hello@websnap.agency</a>
             <div class="seattle-footer-badge">
-              <img src="/assets/webflow-icon.png" /> Enterprise Partner
+              <img src="/assets/webflow-icon.png" loading="lazy"/> Enterprise Partner
             </div>
           </div>
 
@@ -697,6 +703,65 @@
       </footer>
     </div>
   </body>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-form">
+      <span class="close-icon" onclick="closePopup()">&times;</span>
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" id="name" />
+      <input type="email" placeholder="Your Email" id="email" />
+      <textarea placeholder="Your Message" id="message" rows="4"></textarea>
+      <button class="submit-btn" onclick="submitForm()">Submit</button>
+    </div>
+  </div>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll("h1, h2, h3, h4, h5,h6, p , ul");
+
+  elements.forEach(el => {
+    el.classList.add("fade-in-bottom");
+  });
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // optional: animate only once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  elements.forEach(el => {
+    observer.observe(el);
+  });
+});
+
+  </script>
+  <script>
+    function openPopup() {
+      const popup = document.getElementById("popup");
+      popup.style.display = "flex";
+    }
+
+    function closePopup() {
+      const popup = document.getElementById("popup");
+      popup.style.display = "none";
+    }
+
+    function submitForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      if (name && email && message) {
+        alert(`Thank you, ${name}!\nYour message has been sent.`);
+        closePopup();
+      } else {
+        alert("Please fill out all fields.");
+      }
+    }
+  </script>
   <script>
     const glow = document.querySelector(".seattle-faq-glow");
     const section = document.querySelector(".seattle-faq-section");
@@ -740,7 +805,32 @@
       });
     });
   </script>
+ <script>
+    function minifyJS(code) {
+      return code
+        .replace(/\/\/.*$/gm, '')
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/\s{2,}/g, ' ')
+        .replace(/\n/g, '')
+        .trim();
+    }
 
+    function minifyCSS(css) {
+      return css
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/\s{2,}/g, ' ')
+        .replace(/\s*({|}|;|:|,)\s*/g, '$1')
+        .replace(/\n/g, '')
+        .trim();
+    }
+
+    function minify() {
+      const input = document.getElementById('input').value;
+      const type = document.getElementById('type').value;
+      const output = type === 'js' ? minifyJS(input) : minifyCSS(input);
+      document.getElementById('output').value = output;
+    }
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const progressLine = document.querySelector(
