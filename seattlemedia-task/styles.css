@@ -826,7 +826,7 @@ body {
 }
 .seattle-new-testimonial-slide.active {
   display: flex;
-  animation: fadeInRight 0.5s ease-in;
+  animation: fadeInRight 0.6s ease-in;
 }
 
 @keyframes fadeInRight  {
