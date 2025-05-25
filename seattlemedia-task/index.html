@@ -739,6 +739,44 @@
 });
 
   </script>
+   <script>
+    // Select all slides and dots
+const slides = document.querySelectorAll('.seattle-new-testimonial-slide');
+const dots = document.querySelectorAll('.seattle-new-testimonial-carousel-dots span');
+
+let currentIndex = 0;
+const slideCount = slides.length;
+const intervalTime = 4000; // 4 seconds
+
+function showSlide(index) {
+  // Remove 'active' from all slides and dots
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  // Add 'active' to current slide and dot
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slideCount;
+  showSlide(currentIndex);
+}
+
+// Auto start sliding
+let slideInterval = setInterval(nextSlide, intervalTime);
+
+// Optional: click dots to jump to slide
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    currentIndex = i;
+    showSlide(currentIndex);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  });
+});
+
+  </script>
   <script>
     function openPopup() {
       const popup = document.getElementById("popup");
